@@ -1,0 +1,18 @@
+{
+  "name": "@viteblog/main",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Wouter Vernaillen",
+  "scripts": {
+    "build": "pnpm recursive run build",
+    "dev": "pnpm recursive run dev",
+    "typecheck": "pnpm recursive run typecheck",
+    "clean": "pnpm recursive exec -- rm -rf node_modules; rm -rf node_modules"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=6"
+  }
+}

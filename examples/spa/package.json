@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --watch ../../dist/index.js -x \"cross-env DEBUG=vite-plugin-pages:*,viteblog:* vite\"",
+    "build": "cross-env vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@viteblog/vue-plugin": "workspace:^0.0.1",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.3"
+  },
+  "devDependencies": {
+    "@viteblog/vite-plugin": "workspace:^0.0.1",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "@vue/compiler-sfc": "^3.2.37",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.4",
+    "vite-plugin-inspect": "^0.6.0"
+  }
+}
