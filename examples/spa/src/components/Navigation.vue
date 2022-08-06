@@ -1,25 +1,27 @@
 <script setup lang="ts">
-import routes from '~pages'
+const { locale, t } = useI18n()
 </script>
 
 <template>
-    <nav class="
-        relative
-        w-full
-        flex flex-wrap
-        py-4
-        pl-5
-        bg-gray-100
-        text-gray-500
-        hover:text-gray-700
-        focus:text-gray-700
-        shadow-lg
-        navbar navbar-expand-lg navbar-light
-        ">
-        <ul class="flex">
-            <li class="mr-6" v-for="route, index in routes" :key="index">
-                <router-link :to="route.path">{{ route.name }}</router-link>
-            </li>
-        </ul>
-    </nav>
+    <ul class="flex w-full">
+        <li class="mr-6">
+            <router-link :to="`/${locale}`">
+                {{ t('nav.home') }}
+            </router-link>
+        </li>
+        <li class="mr-6">
+            <router-link :to="`/${locale}/blog`">
+                {{ t('nav.blog') }}
+            </router-link>
+        </li>
+    </ul>
 </template>
+
+<style scoped>
+    li a {
+        padding: 16px 12px;
+    }
+    .router-link-active {
+        border-bottom: 2px solid #BFAC22;
+    }
+</style>

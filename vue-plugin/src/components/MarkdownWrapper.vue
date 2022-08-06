@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 defineProps({
   frontmatter: {
     type: Object,
@@ -8,7 +10,6 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-lg mb-11">Markdown Wrapper</div>
   <div class="container mx-auto px-4 pt-16 my-20">
     <div class="flex flex-wrap">
       <div class="w-full px-4 sm:px-6 lg:px-8 mb-10">
@@ -19,7 +20,7 @@ defineProps({
             </h1>
           </div>
           <div v-if="frontmatter.desc" class="flex flex-wrap">
-            <h4>
+            <h4 class="ml-4">
               {{ frontmatter.desc }}
             </h4>
           </div>
@@ -35,5 +36,8 @@ defineProps({
         </div>
       </div>
     </div>
+  </div>
+  <div class="text-lg mb-11">
+    {{ t('hello') }}
   </div>
 </template>

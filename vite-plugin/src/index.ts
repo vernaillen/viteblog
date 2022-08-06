@@ -38,8 +38,7 @@ function ViteBlogFramework(options: Options): Plugin[] {
       syncIndex: false,
       dirs: [
         { dir: 'src/pages', baseRoute: '' },
-        { dir: 'content/nl', baseRoute: 'nl' },
-        { dir: 'content/en', baseRoute: 'en' },
+        { dir: 'content', baseRoute: '' },
       ],
     }),
     AutoImport({
@@ -54,7 +53,7 @@ function ViteBlogFramework(options: Options): Plugin[] {
     VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
-      include: [path.resolve(__dirname, './content/*.yml')],
+      include: [path.resolve('./content/**/*.yml')],
     }),
     ViteBlogPlugin(options),
   ]

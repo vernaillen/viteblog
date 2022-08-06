@@ -1,0 +1,25 @@
+language: 言語
+hello: こんにちは!
+nav:
+  home: Home JA
+  blog: Blog JA
+website:
+  title: ViteBlog
+  description: Next generation Blog Framework, using Vite, Vue, Markdown, etc
+  noJavaScript: JavaScript が必要です
+blog:
+  readmore: read more
+  findoutmore: find out more
+  by: by
+  next: next blogpost
+  previous: previous blogpost
+contact:
+  name: Your name
+  email: Your email
+  message: Your message
+  submit: Submit
+  required: Custom, required
+  field_too_short: Custom
+footer:
+  findus: You can find us on any of these platforms.
+  copyright: Copyright ©

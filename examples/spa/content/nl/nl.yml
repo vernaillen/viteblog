@@ -1,0 +1,25 @@
+language: taal
+hello: Hallo, wereld!"
+nav:
+  home: Home
+  blog: Blog
+website:
+  title: ViteBlog
+  description: Next generation Blog Framework, gebruik makend van Vite, Vue, Markdown, etc
+  noJavaScript: JavaScript is nodig
+blog:
+  readmore: lees meer
+  findoutmore: ontdek meer
+  by: door
+  next: volgende blogpost
+  previous: vorige blogpost
+contact:
+  name: Jouw naam
+  email: Jouw email
+  message: Jouw bericht
+  submit: Verstuur
+  required: Custom, required
+  field_too_short: Custom
+footer:
+  findus: Je kan ons ook vinden op deze platformen
+  copyright: Copyright ©

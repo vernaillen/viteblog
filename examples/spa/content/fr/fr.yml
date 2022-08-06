@@ -1,0 +1,25 @@
+language: langue
+hello: Bonjour le monde
+nav:
+  home: Acceuil
+  blog: Le Blog
+website:
+  title: ViteBlog
+  description: Next generation Blog Framework, utilisant Vite, Vue, Markdown, etc
+  noJavaScript: JavaScript est requis
+blog:
+  readmore: read more
+  findoutmore: find out more
+  by: by
+  next: next blogpost
+  previous: previous blogpost
+contact:
+  name: Your name
+  email: Your email
+  message: Your message
+  submit: Submit
+  required: Custom, required
+  field_too_short: Custom
+footer:
+  findus: You can find us on any of these platforms.
+  copyright: Copyright ©

@@ -18,7 +18,7 @@ function ViteBlogPlugin(options: Options): Plugin {
     enforce: 'pre',
 
     transform(raw, id) {
-      debug(`transform id: ${id}`)
+      debug(`transform: ${id}`)
       if (!filter(id))
         return
       try {

@@ -9,12 +9,12 @@ const config = defineConfig({
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    WindiCSS(),
     ViteBlogFramework({
       test: false,
       extentions: ['vue', 'md'],
       include: [/\.vue$/, /\.md$/],
     }),
+    WindiCSS(),
     Inspect(),
   ],
 })

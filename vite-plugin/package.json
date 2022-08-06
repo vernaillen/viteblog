@@ -45,7 +45,9 @@
   },
   "dependencies": {
     "@intlify/vite-plugin-vue-i18n": "^5.0.1",
+    "@viteblog/vue-plugin": "workspace:^0.0.1",
     "@vueuse/head": "^0.7.9",
+    "petite-vue-i18n": "^9.2.2",
     "unplugin-auto-import": "^0.10.3",
     "unplugin-vue-components": "^0.22.0",
     "vite-plugin-pages": "^0.25.0",
