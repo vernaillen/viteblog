@@ -34,3 +34,11 @@ h6 {
 .navbarTogglerActive > span:nth-child(3) {
   @apply top-[-8px] transform rotate-[135deg];
 }
+
+
+nav ul li a {
+  padding: 16px 12px;
+}
+nav ul li a.router-link-active {
+  border-bottom: 2px solid #BFAC22;
+}

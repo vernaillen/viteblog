@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { viteBlogInitRouting } from '@viteblog/vue-plugin'
 viteBlogInitRouting(useRoute(), useRouter())
-const { t } = useI18n()
+const { locale, t } = useI18n()
 </script>
 
 <template>
@@ -26,7 +26,18 @@ const { t } = useI18n()
         navbar navbar-expand-lg navbar-light
         justify-between
         ">
-      <navigation />
+      <ul class="flex w-full">
+        <li class="mr-6">
+          <router-link :to="`/${locale}`">
+            {{ t('nav.home') }}
+          </router-link>
+        </li>
+        <li class="mr-6">
+          <router-link :to="`/${locale}/blog`">
+            {{ t('nav.blog') }}
+          </router-link>
+        </li>
+      </ul>
       <div class="mr-12 max-w-full">
         <language-switcher />
       </div>
