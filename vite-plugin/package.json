@@ -1,6 +1,6 @@
 {
   "name": "@viteblog/vite-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "license": "MIT",
   "author": "Wouter Vernaillen <wouter@vernaillen.dev>",
@@ -28,7 +28,7 @@
     "dev": "npm run build -- --watch",
     "build": "tsup src/index.ts --dts --format cjs,esm",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json --composite false",
-    "release": "npx bumpp --commit --tag --push && npm publish"
+    "release": "npx bumpp --commit --tag --push && npm publish --access public"
   },
   "keywords": [
     "vite",
