@@ -9,10 +9,11 @@ import './css/main.css'
 import './css/prose.css'
 //import { debug } from './utils'
 import { ViteBlogOptions } from './types'
-import { createI18nInstance } from './i18n'
+import { i18nInstance } from './i18n'
 import { createPinia } from 'pinia'
 import { NavigationItems } from './navigation'
 import { viteBlogInitRouting } from './routing'
+import { useLocale } from './stores/lang'
 
 const ViteBlogPlugin: Plugin = {
   install(app: App, options: ViteBlogOptions) {
@@ -20,10 +21,12 @@ const ViteBlogPlugin: Plugin = {
     console.log(options)
 
     const pinia = createPinia()
-    const i18nInstance = createI18nInstance(options)
-
     app.use(pinia)
     app.use(i18nInstance)
+
+    useLocale().setLanguage(options.defaultLocale ? options.defaultLocale : 'en')
+    useLocale().setAvailableLocales(i18nInstance.global.availableLocales)
+
     app.component('MarkdownWrapper', MarkdownWrapper)
     app.component('LanguageSwitcher', LanguageSwitcher)
   },

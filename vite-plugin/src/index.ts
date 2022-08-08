@@ -1,7 +1,13 @@
 import path from 'path'
 import type { Plugin } from 'vite'
 import Pages from 'vite-plugin-pages'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'vite-plugin-md'
+import LinkAttributes from 'markdown-it-link-attributes'
+import Anchor from 'markdown-it-anchor'
+import Prism from 'markdown-it-prism'
+import code from '@yankeeinlondon/code-builder'
+import link from '@yankeeinlondon/link-builder'
+import meta from '@yankeeinlondon/meta-builder'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -14,13 +20,14 @@ function ViteBlogFramework(options: Options): Plugin[] {
   debug(options)
   return [
     Markdown({
+      builders: [link(), meta(), code()],
       markdownItOptions: {
         html: true,
         linkify: true,
         typographer: true,
       },
       wrapperComponent: 'markdown-wrapper',
-      /* markdownItSetup(md) {
+      markdownItSetup(md) {
         md.use(Anchor)
         md.use(Prism)
         md.use(LinkAttributes, {
@@ -30,7 +37,7 @@ function ViteBlogFramework(options: Options): Plugin[] {
             rel: 'noopener',
           },
         })
-      }, */
+      },
       headEnabled: false,
     }),
     Pages({

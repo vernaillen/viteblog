@@ -8,7 +8,7 @@ const router = useRouter()
 
 const setLanguage = (event: Event) => {
   const target = event.target as HTMLSelectElement
-  locale.value = target.value
+  console.log('changing language to ' + target.value)
   useLocale().setLanguage(target.value)
   router.push(`/${target.value}/${route.path.substring(4)}`)
 }
@@ -17,7 +17,7 @@ const setLanguage = (event: Event) => {
 <template>
   <form style="display: flex">
     <span>{{ t('language') }}: </span>
-    <select @change="setLanguage" style="background-color: transparent;">
+    <select v-model="locale" @change="setLanguage" style="background-color: transparent;">
       <option v-for="lang in availableLocales" :value="lang" :selected="locale === lang">
         {{ lang }}
       </option>

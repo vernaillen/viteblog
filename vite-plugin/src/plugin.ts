@@ -14,7 +14,7 @@ function ViteBlogPlugin(options: Options): Plugin {
   )
 
   return {
-    name: 'vite-plugin-vue-markdown',
+    name: 'viteblog-vite-plugin',
     enforce: 'pre',
 
     transform(raw, id) {

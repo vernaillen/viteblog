@@ -1,15 +1,18 @@
 import { defineStore } from 'pinia'
-import { getI18n } from '../i18n'
+import { i18n } from '../i18n'
 
 export const useLocale = defineStore('localeStore', {
   state: () => ({
     lang: 'nl',
+    availableLocales: ['en']
   }),
   actions: {
     setLanguage(newLang: string) {
-      const i18n = getI18n()
-      if (i18n) i18n.locale = newLang
       this.lang = newLang
+      i18n.locale.value = newLang
     },
+    setAvailableLocales(availableLocales: string[]) {
+      this.availableLocales = availableLocales
+    }
   },
 })

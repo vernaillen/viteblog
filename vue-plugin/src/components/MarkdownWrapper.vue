@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
 defineProps({
   frontmatter: {
     type: Object,
@@ -36,8 +34,5 @@ defineProps({
         </div>
       </div>
     </div>
-  </div>
-  <div class="text-lg mb-11">
-    {{ t('hello') }}
   </div>
 </template>
